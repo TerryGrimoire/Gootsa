@@ -9,7 +9,7 @@ function Burger({ helmet }) {
   const [openBurger, setOpenBurger] = useState(false);
 
   return (
-    <header className="flex padding-header justify-between align-center">
+    <header>
       <Link to="/">
         <img src={logo} alt={`logo de ${helmet.title}`} className="logo" />
       </Link>

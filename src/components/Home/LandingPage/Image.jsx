@@ -21,7 +21,10 @@ function Image({ helmet }) {
     alt: "decription de l'image",
   };
   return (
-    <section className="landing_page relative">
+    <section className="landing_page">
+      <p className="banniere">
+        Ne ratez pas la nocture de ce vendredi, jusqu'à 21h ! TradiBon et riz chauffé au menu.
+      </p>
       <h1>{helmet.title}</h1>
       <h2>{helmet.sentence}</h2>
       <div className="home_button_container">
