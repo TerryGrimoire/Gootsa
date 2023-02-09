@@ -1,13 +1,20 @@
 /********************************************************************* CSS VARIABLES *********************************************************************/ 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mukta:wght@600&display=swap');
+@font-face {
+  font-family: bakery;
+  src: url("/BakerieRough-Regular.otf");
+}
+
 :root {
 
   --main-bg-color : #FFFFFF;
   --secondary-bg-color : #191919;
   --third-color : #999999;
   --button-color: #0055FF;
+
+  --button-burger: #FFE5C4;
+  --rouge-color:#E36325;
   --box-shadow: #e1e1e1 0px 1px 0px, #e1e1e1 0px 4px 16px, #e1e1e1 0px 8px 16px;
-  --font-title : 'Mukta', sans-serif;
+  --font-title : 'bakery';
   --font-text :'Josefin Sans', sans-serif;
 }
 
@@ -27,6 +34,7 @@
 
 h1, h2 {
   font-family: var(--font-title);
+  font-weight: 100;
 }
 
 a {
@@ -153,15 +161,29 @@ button.croix {
 }
 
 .padding-header {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem 1.5rem;
 }
 
 .burger {
-height: 2rem;
+height: 3rem;
+width: 3rem;
+border-radius: 50%;
+padding: 0.1rem;
+background-color: var(--button-burger);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.burger img {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: transparent;
 }
 
 .logo {
-  height: 4rem;
+  height: 3rem;
+  width: auto;
 }
 
 /********************************************************************* HOME *********************************************************************/ 
@@ -179,7 +201,12 @@ height: 2rem;
   margin: 1rem 0 2rem;
 }
 .landing_page h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.landing_page h2 {
+  font-size: 2rem;
   text-align: center;
 }
 .landing_page h1, .landing_page h2 {
@@ -188,6 +215,7 @@ height: 2rem;
   z-index: 1;
   margin: 0;
   color: var(--main-bg-color);
+  font-weight: bold;
 }
 
   .background_img {
@@ -204,6 +232,37 @@ height: 2rem;
     opacity: 60%;
   }
 
+.home_button_container {
+z-index: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+background-color: transparent;
+margin: 2rem 0;
+}
+
+.home_button_container img {
+  background-color: transparent;
+  margin-left: 1rem;
+}
+
+.home_button_container button {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  color: var(--main-bg-color);
+  background-color: transparent;
+  border: 1px white solid;
+}
+
+.home_button_container button:first-of-type {
+  background-color: var(--rouge-color);
+  border: none;
+}
 
 /********************************************************************* Page 1 *********************************************************************/ 
 

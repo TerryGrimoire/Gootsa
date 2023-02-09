@@ -23,7 +23,7 @@ export default function Home({ helmet }) {
  
         */}
 
-      <Image title={helmet.title} />
+      <Image helmet={helmet} />
       <section className="section2">
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus

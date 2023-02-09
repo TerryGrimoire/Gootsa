@@ -11,8 +11,9 @@ import "./App.css";
 
 function App() {
   const helmet = {
-    title: "Change Title",
-    href: "https://changehref.com",
+    title: "Gootsa, la Kfet",
+    sentence: "Une cuisine saine, bonne et goûteuse !",
+    href: "https://gootsa.re",
     description: "Change description",
   };
   return (

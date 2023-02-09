@@ -1,7 +1,8 @@
 import React from "react";
 import background from "../../../assets/background.png";
+import go from "../../../assets/go.svg"
 
-function Image({ title }) {
+function Image({ helmet }) {
   /* Pour utiliser ce composant, suivre les étapes suivantes :
 
     1/ Remplacer background.png par l'image souhaitée dans Assets
@@ -21,9 +22,13 @@ function Image({ title }) {
   };
   return (
     <section className="landing_page relative">
-      <h1>{title}</h1>
-      <h2>{landingData.h2}</h2>
-      <img src={background} alt={landingData.alt} className="background_img" />
+      <h1>{helmet.title}</h1>
+      <h2>{helmet.sentence}</h2>
+      <div className="home_button_container">
+        <button type="button">Découvrir le menu <img src={go} alt="fleche vers la droite" /></button>
+        <button type="button">Nous trouver <img src={go} alt="fleche vers la droite" /></button>
+      </div>
+      <img src={background} alt={helmet.sentence} className="background_img" />
       <div className="veil" />
     </section>
   );
