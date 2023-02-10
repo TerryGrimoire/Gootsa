@@ -12,6 +12,10 @@ function Services({ helmet }) {
         <link rel="canonical" href={`${helmet.href}/Services`} />
         <meta name="description" content={helmet.description} />
       </Helmet>
+
+      <section>
+        <h1>Menu</h1>
+      </section>
     </div>
   );
 }

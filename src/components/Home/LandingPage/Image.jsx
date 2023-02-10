@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import dataFR from "../../../data/dataFR";
 import dataRE from "../../../data/dataRE";
 import background from "../../../assets/background.png";
@@ -14,9 +15,9 @@ function Image({ helmet, langue }) {
       <h1>{helmet.title}</h1>
       <h2>{data[0].h2}</h2>
       <div className="home_button_container">
-        <button type="button">{data[0].button1}<img src={go} alt="fleche vers la droite" /></button>
-        <button type="button">{data[0].button2}<img src={go} alt="fleche vers la droite" /></button>
-      </div>
+        <Link to="/Menu"><button type="button">{data[0].button1}<img src={go} alt="fleche vers la droite" /></button>
+        </Link> <Link to="/Contact"><button type="button">{data[0].button2}<img src={go} alt="fleche vers la droite" /></button>
+        </Link> </div>
       <img src={background} alt={helmet.sentence} className="background_img" />
       <div className="veil" />
     </section>

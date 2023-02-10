@@ -13,15 +13,8 @@ function Burger({ helmet, langue, setLangue }) {
       <Link to="/">
         <img src={logo} alt={`logo de ${helmet.title}`} className="logo" />
       </Link>
-      <select
-          name="language"
-          id="language"
-          className={langue === "fr" ? "drapeau_fr" : "drapeau_re"}
-          onChange={(e) => setLangue(e.target.value)}
-        >
-          <option value="fr">FR</option>
-          <option value="re">RE</option>
-        </select>
+      <button type="button" onClick={()=> setLangue("re")}>RE</button>
+      <button type="button" onClick={()=> setLangue("fr")}>FR</button>
       <button
         type="button"
         onClick={() => setOpenBurger(!openBurger)}
