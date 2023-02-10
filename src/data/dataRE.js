@@ -1,3 +1,8 @@
+import takeaway from "../assets/takeaway.png";
+import solider from "../assets/solider.svg";
+import famille from "../assets/famille.png";
+import coeur from "../assets/coeur.svg";
+
 const dataRE=
 [
     {
