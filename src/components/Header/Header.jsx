@@ -5,7 +5,7 @@ import Navbar from "../Navigation/Navbar";
 import burger from "../../assets/menu.svg";
 import logo from "../../assets/logo.png";
 
-function Burger({ helmet, langue, setLangue }) {
+function Burger({ helmet, setLangue }) {
   const [openBurger, setOpenBurger] = useState(false);
 
   return (
@@ -13,10 +13,14 @@ function Burger({ helmet, langue, setLangue }) {
       <Link to="/">
         <img src={logo} alt={`logo de ${helmet.title}`} className="logo" />
       </Link>
-     <div className="languages">
-     <button type="button" onClick={()=> setLangue("re")}>RE</button>
-      <button type="button" onClick={()=> setLangue("fr")}>FR</button>
-     </div>
+      <div className="languages">
+        <button type="button" onClick={() => setLangue("re")}>
+          RE
+        </button>
+        <button type="button" onClick={() => setLangue("fr")}>
+          FR
+        </button>
+      </div>
       <button
         type="button"
         onClick={() => setOpenBurger(!openBurger)}

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import Image from "../components/Home/LandingPage/Image";
 import Propos from "../components/Home/Propos";
 
@@ -15,27 +15,51 @@ export default function Home({ helmet, langue }) {
     window.scrollTo(0, 0);
   }, []);
 
-  const data = langue === "fr"? dataFR : dataRE;
+  const data = langue === "fr" ? dataFR : dataRE;
   const handleDragStart = (e) => e.preventDefault();
 
-const items = [
-  <div className="formules_explications">
-    <div>
-    <h3>VégéBon</h3>
-    <h4>le bowl froid</h4>
-    <img src={vegebon} onDragStart={handleDragStart} role="presentation" className="carousel_home_img_gootsa" />
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum inventore culpa quas repellat accusamus, omnis odit recusandae nostrum? Fugiat veritatis totam reprehenderit. Quaerat sed mollitia vitae, dolor nobis pariatur deserunt facilis id esse ex obcaecati et? Omnis, porro voluptatem doloremque quasi nemo natus dolorum hic ad, quo, ab maiores.</p>
-    </div>
-  </div>,
-  <div className="formules_explications">
-    <div>
-  <h3>TradiBon</h3>
-  <h4>le bowl froid</h4>
-  <img src={vegebon} onDragStart={handleDragStart} role="presentation" className="carousel_home_img_gootsa" />
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum inventore culpa quas repellat accusamus, omnis odit recusandae nostrum? Fugiat veritatis totam reprehenderit. Quaerat sed mollitia vitae, dolor nobis pariatur deserunt facilis id esse ex obcaecati et? Omnis, porro voluptatem doloremque quasi nemo natus dolorum hic ad, quo, ab maiores.</p>
-</div></div>
-
-];
+  const items = [
+    <div className="formules_explications">
+      <div>
+        <h3>VégéBon</h3>
+        <h4>le bowl froid</h4>
+        <img
+          src={vegebon}
+          onDragStart={handleDragStart}
+          alt="presentation"
+          className="carousel_home_img_gootsa"
+        />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum
+          inventore culpa quas repellat accusamus, omnis odit recusandae
+          nostrum? Fugiat veritatis totam reprehenderit. Quaerat sed mollitia
+          vitae, dolor nobis pariatur deserunt facilis id esse ex obcaecati et?
+          Omnis, porro voluptatem doloremque quasi nemo natus dolorum hic ad,
+          quo, ab maiores.
+        </p>
+      </div>
+    </div>,
+    <div className="formules_explications">
+      <div>
+        <h3>TradiBon</h3>
+        <h4>le bowl froid</h4>
+        <img
+          src={vegebon}
+          onDragStart={handleDragStart}
+          alt="presentation"
+          className="carousel_home_img_gootsa"
+        />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum
+          inventore culpa quas repellat accusamus, omnis odit recusandae
+          nostrum? Fugiat veritatis totam reprehenderit. Quaerat sed mollitia
+          vitae, dolor nobis pariatur deserunt facilis id esse ex obcaecati et?
+          Omnis, porro voluptatem doloremque quasi nemo natus dolorum hic ad,
+          quo, ab maiores.
+        </p>
+      </div>
+    </div>,
+  ];
   return (
     <main>
       <Helmet>
@@ -54,15 +78,13 @@ const items = [
         </p>
       </section>
       <section className="home_carousel_container_gootsa">
-      <AliceCarousel mouseTracking items={items} disableDotsControls  />
-
+        <AliceCarousel mouseTracking items={items} disableDotsControls />
       </section>
       <section>
-      <h2>{data[2][0].h2}</h2>
-      <Propos index1="2" index2="0" langue={langue} />
-     <Propos index1="2" index2="1" langue={langue} />
+        <h2>{data[2][0].h2}</h2>
+        <Propos index1="2" index2="0" langue={langue} />
+        <Propos index1="2" index2="1" langue={langue} />
       </section>
-     
     </main>
   );
 }
