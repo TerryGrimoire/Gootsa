@@ -17,16 +17,25 @@ const dataRE=
         TradiBon: "le bowl froid",
         p3 :"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellen dusaliquid vel blanditiis. Iste earum tempore, corrupti distinctio dignissimos incidunt eveniet in tempora libero!",
     },
-    {
-        id:2,
-        section: "home_apropos",
+    [
+        {
+        id: "home_apropos1",
         h2: "À propos de Gootsa",
-        h31:"Local, de qualité et de saison",
-        p1 :"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellen dusaliquid vel blanditiis. Iste earum tempore, corrupti distinctio dignissimos incidunt eveniet in tempora libero!",
-        h32:"Une histoire de famille",
-        p2 :"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellen dusaliquid vel blanditiis. Iste earum tempore, corrupti distinctio dignissimos incidunt eveniet in tempora libero!",
-            
-    },
+        h3:"Local, de qualité et de saison",
+        p:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellen dusaliquid vel blanditiis. Iste earum tempore, corrupti distinctio dignissimos incidunt eveniet in tempora libero!",
+        img1: takeaway,
+        img2: solider,
+        bg:"marron"
+        }, 
+        {
+        id: "home_apropos2",
+        h3:"Une histoire de famille",
+        p:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellen dusaliquid vel blanditiis. Iste earum tempore, corrupti distinctio dignissimos incidunt eveniet in tempora libero!",
+        img1: famille,
+        img2: coeur,
+        bg:"rouge"
+    }        
+    ],
     {
         id:3,
         section: "home_infos",
