@@ -13,8 +13,10 @@ function Burger({ helmet, langue, setLangue }) {
       <Link to="/">
         <img src={logo} alt={`logo de ${helmet.title}`} className="logo" />
       </Link>
-      <button type="button" onClick={()=> setLangue("re")}>RE</button>
+     <div className="languages">
+     <button type="button" onClick={()=> setLangue("re")}>RE</button>
       <button type="button" onClick={()=> setLangue("fr")}>FR</button>
+     </div>
       <button
         type="button"
         onClick={() => setOpenBurger(!openBurger)}
