@@ -34,7 +34,7 @@ const dataFr = [
       p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellen dusaliquid vel blanditiis. Iste earum tempore, corrupti distinctio dignissimos incidunt eveniet in tempora libero!",
       img1: takeaway,
       img2: solider,
-      bg: "marron",
+      bg: "vert",
     },
     {
       id: "2.2",

@@ -15,7 +15,8 @@
   --button-burger: #FFE5C4;
   --rouge-color:#E36325;
   --bleu-color: #326583;
-  --marron-color:#5A7B53;
+  --vert-color:#5A7B53;
+  --marron-color:#403630;
   --white: #FFFFFF;
   --box-shadow: #e1e1e1 0px 1px 0px, #e1e1e1 0px 4px 16px, #e1e1e1 0px 8px 16px;
   --font-title : 'bakery';
@@ -359,7 +360,7 @@ overflow: visible;
   position:absolute;
   background-color: transparent;
   width: 100%;
-  color: var(--marron-color);
+  color: var(--vert-color);
   font-size: 2.25rem;
 
 }
@@ -376,6 +377,11 @@ overflow: visible;
 
 .home_carousel_container_gootsa div h4 {
   margin: 1.5rem 0;
+  color: var(--marron-color);
+}
+
+.home_carousel_container_gootsa div h3 {
+  color: var(--vert-color);
 }
 
 .home_carousel_container_gootsa div img {
@@ -415,6 +421,9 @@ overflow: visible;
   background-color: var(--marron-color);
 }
 
+.vert, .vert * {
+  background-color: var(--vert-color);
+}
 .rouge, .rouge * {
   background-color: var(--rouge-color);
 }
@@ -486,6 +495,10 @@ overflow: visible;
 
 .homeInfo {
   padding: 1rem;
+}
+
+.formules p, .home_carousel_container_gootsa p.p {
+  color: var(--marron-color);
 }
 /********************************************************************* Page 1 *********************************************************************/ 
 

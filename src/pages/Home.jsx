@@ -31,7 +31,7 @@ export default function Home({ helmet, langue }) {
           alt="presentation"
           className="carousel_home_img_gootsa"
         />
-        <p>
+        <p className="p">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum
           inventore culpa quas repellat accusamus, omnis odit recusandae
           nostrum? Fugiat veritatis totam reprehenderit. Quaerat sed mollitia
@@ -51,7 +51,7 @@ export default function Home({ helmet, langue }) {
           alt="presentation"
           className="carousel_home_img_gootsa"
         />
-        <p>
+        <p className="p">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum
           inventore culpa quas repellat accusamus, omnis odit recusandae
           nostrum? Fugiat veritatis totam reprehenderit. Quaerat sed mollitia
@@ -87,6 +87,14 @@ export default function Home({ helmet, langue }) {
         <h2>{data[3].h2}</h2>
         <img src={cafet} alt="intérieur de la cafeteria de Gootsa" />
         <InfosPratiques langue={langue} />
+      </section>
+      <section className="InfosPratiques marron">
+        <div>
+          <img src={data[3].img4} alt="localisation" />
+          <p>
+            <span>{data[3].p7}</span> {data[3].p8}
+          </p>
+        </div>
       </section>
     </main>
   );
