@@ -88,9 +88,9 @@ export default function Home({ helmet, langue }) {
         <img src={cafet} alt="intérieur de la cafeteria de Gootsa" />
         <InfosPratiques langue={langue} />
       </section>
-      <section className="InfosPratiques marron">
-        <div>
-          <img src={data[3].img4} alt="localisation" />
+      <section className="InfosPratiques marron paiement">
+        <div className="paiement">
+          <img src={data[3].img4} alt="carte bancaire acceptées" />
           <p>
             <span>{data[3].p7}</span> {data[3].p8}
           </p>

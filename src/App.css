@@ -500,6 +500,27 @@ overflow: visible;
 .formules p, .home_carousel_container_gootsa p.p {
   color: var(--marron-color);
 }
+
+.paiement {
+  margin:-0.75rem 0 2.5rem;
+  color: var(--main-bg-color);
+}
+
+.paiement div {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 2rem 1rem;
+  margin: 0;
+}
+
+.paiement div p {
+  padding: 0.5rem 1rem;
+}
+.paiement img {
+  margin: 0;
+  width: 2.5rem;
+}
 /********************************************************************* Page 1 *********************************************************************/ 
 
 
