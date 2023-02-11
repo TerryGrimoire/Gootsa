@@ -9,13 +9,15 @@ import pay from "../assets/pay.svg";
 
 const dataFr = [
   {
-    id: "home_landing",
+    id: 0,
+    section: "home_landing",
     h2: "Une cuisine saine, bonne et goûteuse !",
     button1: "Découvrir le menu",
     button2: "Nous trouver",
   },
   {
-    id: "home_formules",
+    id: 1,
+    section: "home_formules",
     h2: "Nos formules",
     p1: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellen dusaliquid vel blanditiis. Iste earum tempore, corrupti distinctio dignissimos incidunt eveniet in tempora libero!",
     vegeBon: "le bowl froid",
@@ -25,7 +27,8 @@ const dataFr = [
   },
   [
     {
-      id: "home_apropos1",
+      id: "2.1",
+      section: "home_apropos1",
       h2: "À propos de Gootsa",
       h3: "Local, de qualité et de saison",
       p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellen dusaliquid vel blanditiis. Iste earum tempore, corrupti distinctio dignissimos incidunt eveniet in tempora libero!",
@@ -34,7 +37,8 @@ const dataFr = [
       bg: "marron",
     },
     {
-      id: "home_apropos2",
+      id: "2.2",
+      section: "home_apropos2",
       h3: "Une histoire de famille",
       p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellen dusaliquid vel blanditiis. Iste earum tempore, corrupti distinctio dignissimos incidunt eveniet in tempora libero!",
       img1: famille,
@@ -43,7 +47,8 @@ const dataFr = [
     },
   ],
   {
-    id: "home_infos",
+    id: 3,
+    section: "home_infos",
     h2: "Infos pratiques",
     p1: "Précommander",
     p2: "au",
@@ -60,7 +65,8 @@ const dataFr = [
     img4: pay,
   },
   {
-    id: "footer",
+    id: 4,
+    section: "home_footer",
     p1: "Suivez-nous sur les réseaux :",
     p2: "Mentions légales",
     p3: "Politique de confidentialité",
