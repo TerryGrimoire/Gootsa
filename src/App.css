@@ -324,6 +324,7 @@ text-align: center;
 font-size: 2.7rem;
 color: var(--bleu-color);
 font-weight: bold;
+margin: 1rem 0;
 }
 
 .section p {
@@ -416,6 +417,37 @@ overflow: visible;
 
 .rouge, .rouge * {
   background-color: var(--rouge-color);
+}
+
+.propos {
+  padding: 0.35rem 0;
+}
+
+.propos > img {
+  margin: 0 0 0.35rem;
+}
+.propos div{
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--main-bg-color);
+}
+.propos h3 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  padding: 0 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.propos div * {
+  margin: 1rem 0;
+}
+
+.propos div img {
+  height: 5rem;
 }
 /********************************************************************* Page 1 *********************************************************************/ 
 

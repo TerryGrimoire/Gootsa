@@ -5,7 +5,7 @@ import dataRE from "../../data/dataRE";
 function Propos({ langue, index1, index2 }) {
   const data = langue === "fr" ? dataFR : dataRE;
   return (
-    <section className="section apropos">
+    <section className="propos">
       <img src={data[index1][index2].img1} alt="" />
       <div className={data[index1][index2].bg}>
         <img

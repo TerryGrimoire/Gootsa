@@ -71,19 +71,18 @@ export default function Home({ helmet, langue }) {
       <Image helmet={helmet} langue={langue} />
       <section className="section formules">
         <h2>{data[1].h2}</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-          aliquid vel blanditiis. Iste earum tempore, corrupti distinctio nam
-          dignissimos incidunt eveniet in tempora libero!
-        </p>
+        <p>{data[1].p1}</p>
       </section>
       <section className="home_carousel_container_gootsa">
         <AliceCarousel mouseTracking items={items} disableDotsControls />
       </section>
-      <section>
+      <section className="section">
         <h2>{data[2][0].h2}</h2>
         <Propos index1="2" index2="0" langue={langue} />
         <Propos index1="2" index2="1" langue={langue} />
+      </section>
+      <section className="section">
+        <h2>{data[3].h2}</h2>
       </section>
     </main>
   );

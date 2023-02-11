@@ -43,11 +43,11 @@ const dataRE = [
   {
     id: 3,
     section: "home_infos",
-    p1: "À propos de Gootsa",
-    p2: "Précommander au",
-    p3: "Ouvert du mardi au samedi de 10h à 21h",
-    p4: "À l'entrée de la médiathèque du Port : Avenue du 20 décembre 1948 97420 Le Port",
-    p5: "Moyens de paiement acceptés sur place: CB, espèces et titres restaurant (tickets et carte).",
+    h2: "Infos pratiques",
+    p1: "Précommander au",
+    p2: "Ouvert du mardi au samedi de 10h à 21h",
+    p3: "À l'entrée de la médiathèque du Port : Avenue du 20 décembre 1948 97420 Le Port",
+    p4: "Moyens de paiement acceptés sur place: CB, espèces et titres restaurant (tickets et carte).",
   },
   {
     id: 4,
