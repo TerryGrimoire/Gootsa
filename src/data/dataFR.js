@@ -2,6 +2,10 @@ import takeaway from "../assets/takeaway.png";
 import solider from "../assets/solider.svg";
 import famille from "../assets/famille.png";
 import coeur from "../assets/coeur.svg";
+import cal from "../assets/cal.svg";
+import loc from "../assets/loc.svg";
+import tel from "../assets/tel.svg";
+import pay from "../assets/pay.svg";
 
 const dataFr = [
   {
@@ -41,10 +45,19 @@ const dataFr = [
   {
     id: "home_infos",
     h2: "Infos pratiques",
-    p1: "Précommander au",
-    p2: "Ouvert du mardi au samedi de 10h à 18h",
-    p3: "À l'entrée de la médiathèque du Port : Avenue du 20 décembre 1948 97420 Le Port",
-    p4: "Moyens de paiement acceptés sur place: CB, espèces et titres restaurant (tickets et carte).",
+    p1: "Précommander",
+    p2: "au",
+    p3: "Ouvert du mardi au samedi",
+    p4: "de 10h à 18h",
+    p9: "Également les 1ers vendredi du mois de 10h à 21h",
+    p5: "À l'entrée de la médiathèque du Port : ",
+    p6: "Avenue du 20 décembre 1948 97420 Le Port",
+    p7: "Moyens de paiement acceptés sur place: ",
+    p8: "CB, espèces et titres restaurant (tickets et carte).",
+    img1: tel,
+    img2: cal,
+    img3: loc,
+    img4: pay,
   },
   {
     id: "footer",

@@ -449,6 +449,44 @@ overflow: visible;
 .propos div img {
   height: 5rem;
 }
+
+.InfosPratiques {
+  margin: 0.25rem 0;
+}
+
+.InfosPratiques div {
+  display: flex;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
+
+.InfosPratiques p {
+  text-align: left;
+  width: 90%;
+}
+
+.InfosPratiques span {
+  font-weight: bold;
+}
+
+.InfosPratiques a {
+  text-decoration: underline;
+}
+
+.InfosPratiques img {
+  height: auto;
+  width: 2rem;
+  margin-top: 1rem;
+}
+
+.homeInfo, .homeInfo * {
+  background-color: var(--bleu-color);
+  color: var(--main-bg-color);
+}
+
+.homeInfo {
+  padding: 1rem;
+}
 /********************************************************************* Page 1 *********************************************************************/ 
 
 

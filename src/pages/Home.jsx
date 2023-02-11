@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Image from "../components/Home/LandingPage/Image";
 import Propos from "../components/Home/Propos";
+import InfosPratiques from "../components/Home/InfosPratiques";
 
 import dataFR from "../data/dataFR";
 import dataRE from "../data/dataRE";
 
 import vegebon from "../assets/vegebon.png";
+import cafet from "../assets/cafet.png";
 
 export default function Home({ helmet, langue }) {
   useEffect(() => {
@@ -83,6 +85,8 @@ export default function Home({ helmet, langue }) {
       </section>
       <section className="section">
         <h2>{data[3].h2}</h2>
+        <img src={cafet} alt="intérieur de la cafeteria de Gootsa" />
+        <InfosPratiques langue={langue} />
       </section>
     </main>
   );
