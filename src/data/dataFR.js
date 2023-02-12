@@ -74,6 +74,11 @@ const dataFr = [
     p5: "Design par",
     p6: "Réalisé avec le soutien de la Région Réunion",
   },
+  {
+    id: 5,
+    section: "contact",
+    h1: "Accès / Contact",
+  },
 ];
 
 export default dataFr;
