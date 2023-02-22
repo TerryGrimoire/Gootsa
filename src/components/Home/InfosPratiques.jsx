@@ -28,7 +28,7 @@ function InfosPratiques({ langue }) {
         </p>
       </div>
       <div>
-        <img src="" alt="" />
+        <div className="fakeimg" />
         <p>{data[3].p9}</p>
       </div>
       <div>

@@ -15,7 +15,7 @@ function Contact({ helmet, langue }) {
   const data = langue === "fr" ? dataFR : dataRE;
 
   return (
-    <div className="flex flex-col align-center">
+    <div className="contact">
       <Helmet>
         <title> {helmet.title} | Contact </title>
         <link rel="canonical" href={`${helmet.href}/Services`} />
@@ -37,6 +37,45 @@ function Contact({ helmet, langue }) {
             <span>{data[3].p7}</span> {data[3].p8}
           </p>
         </div>
+      </section>
+
+      <section className="form">
+        <h2>Nous écrire</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi a, eum
+          fugiat numquam labore tenetur reiciendis quaerat dolore ipsam iste.
+          Nihil tempora in doloribus obcaecati.
+        </p>
+        <form action="submit">
+          <label htmlFor="Nom">
+            {" "}
+            Nom
+            <input type="text" />
+          </label>
+          <label htmlFor="Prenom">
+            {" "}
+            Prénom
+            <input type="text" />
+          </label>
+          <label htmlFor="mail">
+            {" "}
+            Adresse e-mail
+            <input type="text" />
+          </label>
+          <label htmlFor="Texte">
+            {" "}
+            Message
+            <textarea name="texte" id="" cols="30" rows="10" />
+          </label>
+          <label htmlFor="check">
+            <input type="checkbox" name="" id="" />
+            J'accepte que les informations renseignées soient utilisées pour me
+            contacter dans le cadre d'un démarcharge commercial (devis, offre,
+            renseignement...).
+          </label>
+
+          <button type="submit">Envoyer le message</button>
+        </form>
       </section>
     </div>
   );
