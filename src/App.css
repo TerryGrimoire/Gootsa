@@ -539,7 +539,8 @@ overflow: visible;
 }
 
 .contact > img {
-  height: 40vh;
+ width: 100%;
+ height: auto;
 }
 .contact iframe {
   width: 100%;
