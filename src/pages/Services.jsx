@@ -18,7 +18,7 @@ function Services({ helmet }) {
     const json = data2.map((line, index) => {
       if (index > 8) {
         data2[9].forEach((key, j) => {
-          if (line[j] !== "" && key !== "") {
+          if (line[j] !== "" && key !== "" && key) {
             obj = { ...obj, [key]: line[j] };
           }
         });
@@ -27,10 +27,7 @@ function Services({ helmet }) {
     });
 
     json.shift();
-    sessionStorage.setItem(
-      "menus",
-      JSON.stringify([...new Set(json.distinct())])
-    );
+    sessionStorage.setItem("menus", JSON.stringify([...new Set(json)]));
   };
 
   useEffect(() => {
@@ -59,10 +56,29 @@ function Services({ helmet }) {
 
   today = `${yyyy}${mm}${dd}`;
 
-  console.log(today);
-  console.log(menus);
-  console.log(menus[2].Debut.split(" ").pop().split("/").reverse().join(""));
+  const menuDuJour = menus.filter(
+    (menu) =>
+      menu.Type === "Repas Végétarien" &&
+      menu.Debut !== undefined &&
+      menu.Debut !== "Debut" &&
+      menu.Debut.split(" ").pop().split("/").reverse().join("") < today &&
+      menu.Fin.split(" ").pop().split("/").reverse().join("") > today
+  );
+  const menuSuivant = menus.filter(
+    (menu) =>
+      menu.Type === "Repas Végétarien" &&
+      menu.Debut !== undefined &&
+      menu.Debut !== "Debut" &&
+      menu.Debut.split(" ").pop().split("/").reverse().join("") > today
+  );
 
+  const menuDesserts = menus.filter(
+    (menu) => menu.Type === "Dessert" && menu.Debut !== undefined
+  );
+
+  const menuBoissons = menus.filter(
+    (menu) => menu.Type === "Boissons" && menu.Debut !== undefined
+  );
   return (
     <div>
       <Helmet>
@@ -82,18 +98,86 @@ function Services({ helmet }) {
         </p>
         <h1>Au Menu</h1>
       </section>
-      <section className="menu_main">
+      <section className="menu_du_jour">
         {menus &&
-          menus
-            .filter(
-              (menu) => menu.Type !== "Boissons" && menu.Type !== "Dessert"
-            )
-            .map((el) => (
-              <div key={el.id}>
-                <h2>{el.Plat}</h2>
-                <p>{el.Debut}</p>
+          menuDuJour.map((el) => (
+            <div key={el.id}>
+              <h2>{el.Plat} du jour</h2>
+              <div>
+                <div>
+                  <h3>{el.Plat} seul</h3>
+                  <p>{el.Prix.toString().replace("€", "".replace(",", "."))}</p>
+                </div>
+                <p>{el.Description}</p>
               </div>
-            ))}
+              <div>
+                <div>
+                  <h3>Formule {el.Plat} midi</h3>
+                  <p>
+                    {el.PrixFormule.toString().replace(
+                      "€",
+                      "".replace(",", ".")
+                    )}
+                  </p>
+                </div>
+                <p>{el.Formule}</p>
+              </div>
+            </div>
+          ))}
+      </section>
+      <section className="menu_desserts">
+        {menus &&
+          menuDesserts.map((el) => (
+            <div key={el.id}>
+              <h2>Desserts du moment</h2>
+              <div>
+                <div>
+                  <h3>{el.Plat}</h3>
+                  <p>{el.Prix.toString().replace("€", "".replace(",", "."))}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+      </section>
+      <section className="menu_boissons">
+        {menus &&
+          menuBoissons.map((el) => (
+            <div key={el.id}>
+              <h2>Boissons</h2>
+              <div>
+                <div>
+                  <h3>{el.Plat}</h3>
+                  <p>{el.Prix.toString().replace("€", "".replace(",", "."))}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+      </section>
+
+      {menuSuivant.length > 0 && (
+        <section>
+          <h1>Au menu</h1>
+          {menuSuivant.map((el) => (
+            <div key={el.id}>
+              <h2>{el.Debut}</h2>
+              <div>
+                <h3>{el.Plat}</h3>
+                <p>{el.Description}</p>
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
+
+      <section>
+        <h2>Commande de cari au kilo</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ut sequi
+          alias provident, voluptas id cum odio eos, tempora, excepturi ea sed
+          qui a fugiat deleniti dolor quaerat. Vel, quia vero labore illum eius
+          adipisci optio rem doloribus beatae, harum nam voluptatem recusandae
+          corporis nemo corrupti! Labore repudiandae vel neque.
+        </p>
       </section>
     </div>
   );
