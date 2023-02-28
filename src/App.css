@@ -35,12 +35,15 @@
   box-sizing: border-box;
   background-color: var(--main-bg-color);
   font-family: var(--font-text);
-  overflow-x: hidden;
 }
 
 h1, h2 {
   font-family: var(--font-title);
   font-weight: 100;
+}
+
+p {
+  font-size: 1.125rem;
 }
 
 a {
@@ -124,6 +127,10 @@ header {
  height: fit-content;
  padding: 0.25rem 0.5rem;
  margin: 0;
+ position:sticky;
+ width: 100%;
+ z-index: 3;
+ top: 0;
 }
 
 header, header * {
@@ -332,7 +339,6 @@ margin: 0;
   text-align: center;
   padding: 1rem ;
   font-family: var(--font-hind);
-  font-size: 1.125rem;
 }
 .home_carousel_container_gootsa, .home_carousel_container_gootsa * {
 overflow: visible;
@@ -361,7 +367,7 @@ overflow: visible;
   background-color: transparent;
   width: 100%;
   color: var(--vert-color);
-  font-size: 2.25rem;
+  font-size: 2.6rem;
 
 }
 
@@ -445,7 +451,7 @@ overflow: visible;
 }
 .propos h3 {
   font-family: var(--font-title);
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   padding: 0 1rem;
   text-align: center;
   font-weight: 600;
@@ -523,8 +529,20 @@ overflow: visible;
   margin: 0;
   width: 2.5rem;
 }
-/********************************************************************* Page 1 *********************************************************************/ 
+/********************************************************************* MENU *********************************************************************/ 
 
+.menu_top {
+  margin: 0.5rem 0;
+}
+.menu_top p {
+  background-color: var(--button-burger);
+  color: var(--marron-color);
+  padding: 1.5rem 1rem;
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: var(--font-hind);
+  font-weight: 500;
+}
 
 
 /********************************************************************* CONTACT *********************************************************************/ 
@@ -615,7 +633,7 @@ overflow: visible;
   color: var(--secondary-bg-color);
   border-radius: 0.5rem;
   margin: 0.25rem 0  0;
-  border: 0.5px solid black;
+  border: 0.5px solid grey;
 }
 
 .contact form label:last-of-type {
@@ -642,6 +660,10 @@ overflow: visible;
  padding: 1rem 1.5rem;
  border: none;
  font-weight: bold;
+}
+
+.contact .form p {
+  text-align: center;
 }
 /********************************************************************* FOOTER *********************************************************************/ 
 

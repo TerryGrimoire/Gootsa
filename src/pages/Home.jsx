@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import papa from "papaparse";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Image from "../components/Home/LandingPage/Image";
@@ -62,6 +63,37 @@ export default function Home({ helmet, langue }) {
       </div>
     </div>,
   ];
+
+  const prepareData2 = (data2) => {
+    // j correspond aux lignes de A à ZZZ sur fichier Excel
+    // index
+    // line correspond à
+    // index correspond à
+    // key correspond à
+
+    let obj = {};
+    const json = data2.map((line, index) => {
+      if (index > 8) {
+        data2[9].forEach((key, j) => {
+          if (line[j] !== "" && key !== "" && key) {
+            obj = { ...obj, [key]: line[j] };
+          }
+        });
+      }
+      return obj;
+    });
+
+    json.shift();
+    sessionStorage.setItem("menus", JSON.stringify([...new Set(json)]));
+  };
+
+  useEffect(() => {
+    fetch(import.meta.env.VITE_GOOGLE_MENUS)
+      .then((result) => result.text())
+      .then((text) => papa.parse(text))
+      .then((data2) => prepareData2(data2.data));
+  }, []);
+
   return (
     <main>
       <Helmet>
