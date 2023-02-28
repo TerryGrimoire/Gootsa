@@ -126,32 +126,34 @@ function Services({ helmet }) {
           ))}
       </section>
       <section className="menu_desserts menu">
-        {menus &&
-          menuDesserts.map((el) => (
-            <div key={el.id}>
-              <h2>Desserts du moment</h2>
-              <div>
+        {menuDesserts.length > 0 && (
+          <div>
+            <h2>Desserts du moment</h2>
+            {menuDesserts.map((el) => (
+              <div key={el.id}>
                 <div className="prix">
                   <h3>{el.Plat}</h3>
                   <p>{el.Prix.toString().replace("€", "".replace(",", "."))}</p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        )}
       </section>
       <section className="menu_boissons menu">
-        {menus &&
-          menuBoissons.map((el) => (
-            <div key={el.id}>
-              <h2>Boissons</h2>
-              <div>
+        {menuBoissons && (
+          <div>
+            <h2>Boissons</h2>
+            {menuBoissons.map((el) => (
+              <div key={el.id}>
                 <div className="prix">
                   <h3>{el.Plat}</h3>
                   <p>{el.Prix.toString().replace("€", "".replace(",", "."))}</p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        )}
       </section>
 
       {menuSuivant.length > 0 && (
