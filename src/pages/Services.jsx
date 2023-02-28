@@ -96,22 +96,22 @@ function Services({ helmet }) {
           réfléchies pour allier apport énergétique essentiel et saveurs
           locales.
         </p>
-        <h1>Au Menu</h1>
+        <h1 className="menu_top_h1">Au Menu</h1>
       </section>
-      <section className="menu_du_jour">
+      <section className="menu_du_jour menu">
         {menus &&
           menuDuJour.map((el) => (
             <div key={el.id}>
               <h2>{el.Plat} du jour</h2>
               <div>
-                <div>
+                <div className="prix">
                   <h3>{el.Plat} seul</h3>
                   <p>{el.Prix.toString().replace("€", "".replace(",", "."))}</p>
                 </div>
                 <p>{el.Description}</p>
               </div>
               <div>
-                <div>
+                <div className="prix">
                   <h3>Formule {el.Plat} midi</h3>
                   <p>
                     {el.PrixFormule.toString().replace(
@@ -125,13 +125,13 @@ function Services({ helmet }) {
             </div>
           ))}
       </section>
-      <section className="menu_desserts">
+      <section className="menu_desserts menu">
         {menus &&
           menuDesserts.map((el) => (
             <div key={el.id}>
               <h2>Desserts du moment</h2>
               <div>
-                <div>
+                <div className="prix">
                   <h3>{el.Plat}</h3>
                   <p>{el.Prix.toString().replace("€", "".replace(",", "."))}</p>
                 </div>
@@ -139,13 +139,13 @@ function Services({ helmet }) {
             </div>
           ))}
       </section>
-      <section className="menu_boissons">
+      <section className="menu_boissons menu">
         {menus &&
           menuBoissons.map((el) => (
             <div key={el.id}>
               <h2>Boissons</h2>
               <div>
-                <div>
+                <div className="prix">
                   <h3>{el.Plat}</h3>
                   <p>{el.Prix.toString().replace("€", "".replace(",", "."))}</p>
                 </div>
@@ -155,7 +155,7 @@ function Services({ helmet }) {
       </section>
 
       {menuSuivant.length > 0 && (
-        <section>
+        <section className="menu">
           <h1>Au menu</h1>
           {menuSuivant.map((el) => (
             <div key={el.id}>

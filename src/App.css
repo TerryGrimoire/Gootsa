@@ -13,6 +13,7 @@
   --button-color: #0055FF;
 
   --button-burger: #FFE5C4;
+  --light-color: #FEF8F1;
   --rouge-color:#E36325;
   --bleu-color: #326583;
   --vert-color:#5A7B53;
@@ -534,6 +535,7 @@ overflow: visible;
 .menu_top {
   margin: 0.5rem 0;
 }
+
 .menu_top p {
   background-color: var(--button-burger);
   color: var(--marron-color);
@@ -544,7 +546,56 @@ overflow: visible;
   font-weight: 500;
 }
 
+.menu_top h1 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 1rem;
+  font-weight: bold;
+  color: var(--bleu-color);
+}
 
+.menu, .menu * {
+  background-color: var(--light-color);
+}
+
+.menu {
+  padding: 2rem 1rem;
+}
+
+.menu > div {
+  padding-bottom: 3rem;
+}
+
+.menu div > div {
+  margin: 1.5rem 0 0;
+}
+
+.menu h2 {
+  font-size: 2.25rem;
+}
+
+.menu h3{
+  font-size: 1.75rem;
+  font-family: var(--font-title);
+}
+
+.menu div.prix p {
+  font-family: var(--font-hind);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.menu p {
+  font-family: var(--font-hind);
+  font-weight:100;
+  font-size: 1rem;
+}
+
+.menu div.prix {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /********************************************************************* CONTACT *********************************************************************/ 
 
 
