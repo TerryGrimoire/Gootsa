@@ -560,36 +560,37 @@ overflow: visible;
 }
 
 .menu {
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 
 .menu > div {
   padding-bottom: 3rem;
 }
 
-.menu div > div {
-  margin: 1.5rem 0 0;
-}
-
 .menu h2 {
   font-size: 2.25rem;
+  font-weight: bold;
 }
 
 .menu h3{
   font-size: 1.75rem;
   font-family: var(--font-title);
+  margin: 2rem 0 0.5rem;
 }
 
 .menu div.prix p {
   font-family: var(--font-hind);
   font-size: 1.125rem;
   font-weight: 600;
+  color: var(--marron-color);
+  width: 10%
 }
 
 .menu p {
   font-family: var(--font-hind);
   font-weight:100;
   font-size: 1rem;
+  color: var(--marron-color);
 }
 
 .menu div.prix {
@@ -597,6 +598,58 @@ overflow: visible;
   justify-content: space-between;
   align-items: center;
 }
+
+.menu_du_jour > div h2 , .menu_du_jour > div h3 {
+  color: var(--rouge-color);
+}
+
+.menu_du_jour > div:nth-child(2n) h3, .menu_du_jour > div:nth-child(2n) h2 {
+  color: var(--vert-color);
+}
+
+.menu_desserts, .menu_boissons {
+color: var(--bleu-color);
+}
+
+.menu_desserts h3, .menu_boissons h3 {
+font-weight: bold;
+}
+
+.menu_suivant, .menu_suivant * {
+  background-color: var(--main-bg-color);
+}
+.menu_suivant h2.h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu_suivant h2 {
+color: var(--bleu-color);
+}
+.menu_suivant h3, .menu_suivant p {
+  color: var(--marron-color);
+  }
+
+  .menu_suivant h3 {
+    margin-top: 1rem;
+  }
+
+  .menu_commande, .menu_commande * {
+    background-color: var(--light-color);
+  }
+
+  .menu_commande h2 {
+    color: var(--bleu-color);
+    margin: 1.5rem 0;
+  }
+
+  .menu_commande p {
+    color: var(--marron-color);
+  }
+
+  .menu_commande {
+    margin-bottom: 2rem;
+  }
 /********************************************************************* CONTACT *********************************************************************/ 
 
 

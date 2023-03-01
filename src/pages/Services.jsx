@@ -157,11 +157,21 @@ function Services({ helmet }) {
       </section>
 
       {menuSuivant.length > 0 && (
-        <section className="menu">
-          <h1>Au menu</h1>
+        <section className="menu menu_suivant">
+          <h2 className="h1">Au menu</h2>
           {menuSuivant.map((el) => (
             <div key={el.id}>
-              <h2>{el.Debut}</h2>
+              <h2>
+                {(el.Debut.charAt(0).toUpperCase() + el.Debut.slice(1))
+                  .replace("/2023", "")
+                  .replace("/2024", "")
+                  .replace("/2025", "")
+                  .replace("/2026", "")
+                  .replace("/2027", "")
+                  .replace("/2028", "")
+                  .replace("/2029", "")
+                  .replace("/2030", "")}
+              </h2>
               <div>
                 <h3>{el.Plat}</h3>
                 <p>{el.Description}</p>
@@ -171,7 +181,7 @@ function Services({ helmet }) {
         </section>
       )}
 
-      <section>
+      <section className="menu menu_commande">
         <h2>Commande de cari au kilo</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ut sequi
