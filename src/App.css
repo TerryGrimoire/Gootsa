@@ -716,8 +716,9 @@ color: var(--bleu-color);
   margin-bottom: 0rem;
 }
 
-.form {
+.contact .form {
   padding: 1rem;
+  width: 100%;
 }
 
 .contact form, .contact form * {
