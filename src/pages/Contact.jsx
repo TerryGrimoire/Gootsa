@@ -1,5 +1,10 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import InfosPratiques from "../components/Home/InfosPratiques";
 
 import dataFR from "../data/dataFR";
@@ -13,6 +18,40 @@ function Contact({ helmet, langue }) {
   }, []);
 
   const data = langue === "fr" ? dataFR : dataRE;
+  const notify = () =>
+    toast.success("Votre email a bien été envoyé", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const templateID = import.meta.env.VITE_TEMPLATE;
+  const publicKey = import.meta.env.VITE_EMAILJS;
+
+  const onSubmit = (dataForm) => {
+    const FormData = {
+      nom: dataForm.nom,
+      prenom: dataForm.prenom,
+      email: dataForm.email,
+      message: dataForm.message,
+    };
+
+    emailjs
+      .send("service_y9sgq0u", templateID, FormData, publicKey)
+      .then(notify())
+      .then(document.getElementById("myForm").reset(), (error) => {
+        Window.alert(error.text);
+      });
+  };
 
   return (
     <div className="contact">
@@ -46,35 +85,60 @@ function Contact({ helmet, langue }) {
           fugiat numquam labore tenetur reiciendis quaerat dolore ipsam iste.
           Nihil tempora in doloribus obcaecati.
         </p>
-        <form action="submit">
+        <form action="submit" onSubmit={handleSubmit(onSubmit)} id="myForm">
           <label htmlFor="Nom">
             {" "}
             Nom
-            <input type="text" />
+            <input type="text" {...register("nom", { required: true })} />
           </label>
+          {errors.nom && <p>Le nom est obligatoire.</p>}
           <label htmlFor="Prenom">
             {" "}
             Prénom
-            <input type="text" />
+            <input type="text" {...register("prenom", { required: true })} />
           </label>
+          {errors.prenom && <p>Le prénom est obligatoire.</p>}
+
           <label htmlFor="mail">
             {" "}
             Adresse e-mail
-            <input type="text" />
+            <input type="text" {...register("email", { required: true })} />
           </label>
+          {errors.email && <p>L'adresse e-mail est obligatoire.</p>}
+
           <label htmlFor="Texte">
             {" "}
             Message
-            <textarea name="texte" id="" cols="30" rows="10" />
+            <textarea
+              name="texte"
+              id=""
+              cols="30"
+              rows="10"
+              {...register("message", { required: true })}
+            />
           </label>
+          {errors.message && <p>Le message est obligatoire.</p>}
+
           <label htmlFor="check">
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" />
             J'accepte que les informations renseignées soient utilisées pour me
             contacter dans le cadre d'un démarcharge commercial (devis, offre,
             renseignement...).
           </label>
 
           <button type="submit">Envoyer le message</button>
+          <ToastContainer
+            position="bottom-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored"
+          />
         </form>
       </section>
     </div>

@@ -359,8 +359,8 @@ overflow: visible;
   text-align: center;
 }
 
-.home_carousel_container_gootsa div.formules_explications div , .home_carousel_container_gootsa div.formules_explications div * {
-  background-color: #FFFFFF9A;
+.home_carousel_container_gootsa div.formules_explications * , .home_carousel_container_gootsa div.formules_explications div * {
+  background-color: #FCF8F3;
 }
 
 .home_carousel_container_gootsa div.formules_explications div h3 {
@@ -370,6 +370,7 @@ overflow: visible;
   width: 100%;
   color: var(--vert-color);
   font-size: 2.6rem;
+  background-color: inherit;
 
 }
 
@@ -585,7 +586,9 @@ overflow: visible;
   color: var(--marron-color);
   width: 10%
 }
-
+.menu div.prix h3 {
+  width: 80%;
+}
 .menu p {
   font-family: var(--font-hind);
   font-weight:100;
@@ -716,11 +719,16 @@ color: var(--bleu-color);
 .form {
   padding: 1rem;
 }
+
+.contact form, .contact form * {
+  background-color: #FEF8F1;
+}
 .contact form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 .contact form label {
@@ -765,6 +773,7 @@ color: var(--bleu-color);
  padding: 1rem 1.5rem;
  border: none;
  font-weight: bold;
+ margin-bottom: 2rem;
 }
 
 .contact .form p {
@@ -801,6 +810,16 @@ color: var(--bleu-color);
   text-align: center;
   width: 100%;
   margin: 2rem 1rem 0;
+}
+
+.Toastify, .Toastify * {
+  background: initial;
+  color: initial;
+}
+
+.Toastify .Toastify__close-button {
+  padding: 0;
+  background-color: transparent;
 }
 
 /********************************************************************* MENTIONS *********************************************************************/ 
