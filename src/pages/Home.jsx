@@ -115,7 +115,7 @@ export default function Home({ helmet, langue }) {
         <Propos index1="2" index2="0" langue={langue} />
         <Propos index1="2" index2="1" langue={langue} />
       </section>
-      <section className="section">
+      <section className="section infosPratiques_container">
         <h2>{data[3].h2}</h2>
         <img src={cafet} alt="intérieur de la cafeteria de Gootsa" />
         <InfosPratiques langue={langue} />
