@@ -120,7 +120,7 @@ function Contact({ helmet, langue }) {
           {errors.message && <p>Le message est obligatoire.</p>}
 
           <label htmlFor="check">
-            <input type="checkbox" />
+            <input type="checkbox" {...register("check", { required: true })} />
             J'accepte que les informations renseignées soient utilisées pour me
             contacter dans le cadre d'un démarcharge commercial (devis, offre,
             renseignement...).

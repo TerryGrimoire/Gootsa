@@ -8,6 +8,8 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
 
+import whatsapp from "./assets/whatsapp.png";
+
 import "./App.css";
 
 function App() {
@@ -23,20 +25,32 @@ function App() {
   return (
     <BrowserRouter>
       <HelmetProvider>
-        <Header helmet={helmet} langue={langue} setLangue={setLangue} />
-        <Routes>
-          <Route path="/" element={<Home helmet={helmet} langue={langue} />} />
-          <Route
-            path="/Menu"
-            element={<Services helmet={helmet} langue={langue} />}
-          />
-          <Route
-            path="/Contact"
-            element={<Contact helmet={helmet} langue={langue} />}
-          />
-          <Route path="/Mentions" element={<Mentions />} />
-        </Routes>
-        <Footer langue={langue} />
+        <div className="container">
+          <Header helmet={helmet} langue={langue} setLangue={setLangue} />
+          <Routes>
+            <Route
+              path="/"
+              element={<Home helmet={helmet} langue={langue} />}
+            />
+            <Route
+              path="/Menu"
+              element={<Services helmet={helmet} langue={langue} />}
+            />
+            <Route
+              path="/Contact"
+              element={<Contact helmet={helmet} langue={langue} />}
+            />
+            <Route path="/Mentions" element={<Mentions />} />
+          </Routes>
+          <a
+            href="https://api.whatsapp.com/send?phone=+33767846727&text=Bonjour"
+            className="whatsapp"
+          >
+            {" "}
+            <img src={whatsapp} alt="Logo WhatsApp" />{" "}
+          </a>
+          <Footer langue={langue} />
+        </div>
       </HelmetProvider>
     </BrowserRouter>
   );

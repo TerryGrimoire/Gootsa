@@ -5,6 +5,7 @@
   src: url("/BakerieRough-Regular.otf");
 }
 
+
 :root {
 
   --main-bg-color : #FFF4E6;
@@ -105,6 +106,7 @@ li {
 }
 .container {
   position: relative;
+  overflow: visible;
 }
 
 .button_style {
@@ -785,8 +787,17 @@ color: var(--bleu-color);
 .footer {
   padding: 1rem 2rem;
   align-items: flex-start;
-  background-color: var(--secondary-bg-color);
-  color: var(--main-bg-color);
+  background-color: var(--white);
+  color: var(--marron-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer > * {
+  margin-bottom: 1rem;
 }
 
 .footer * {
@@ -794,19 +805,49 @@ color: var(--bleu-color);
   background-color: inherit;
   color: inherit;
 }
-
+.mentions_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
 .footer li, .footer a, .footer div {
   padding: 0.15rem 0;
 }
 .footer-section {
   width: 100%;
 }
-
-.footer img {
-  width: 3rem;
-  margin: 0 0.25rem;
+.footer a {
+  color: #E36325;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline
 }
 
+.footer .reference a {
+  font-weight: normal;
+}
+.footer img {
+  width: 1.5rem;
+  margin: 0 0.25rem;
+}
+.footer > img {
+  width: 40vw;
+  height: auto;
+}
+
+.footer > img.region {
+  width: auto;
+  height: auto;
+}
+
+.footer .reseaux_sociaux {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+}
 .mentions {
   text-align: center;
   width: 100%;
@@ -821,6 +862,21 @@ color: var(--bleu-color);
 .Toastify .Toastify__close-button {
   padding: 0;
   background-color: transparent;
+}
+
+.whatsapp {
+  position:fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.whatsapp img {
+  height: 2.5rem;
+  width: 3rem;
+  padding: 0.5rem 0 ;
+  object-fit: contain;
+  background-color: #31CC21 ;
+  border-radius:40%;
 }
 
 /********************************************************************* MENTIONS *********************************************************************/ 
