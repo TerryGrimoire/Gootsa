@@ -336,7 +336,7 @@ text-align: center;
 font-size: 2.7rem;
 color: var(--bleu-color);
 font-weight: bold;
-margin: 0;
+margin-bottom: 2rem;
 }
 
 .section p {
@@ -924,6 +924,202 @@ color: var(--bleu-color);
 }
 
 /********************************************************************* HOME *********************************************************************/ 
+
+
+/************* LANDING IMAGE *************/
+.landing_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 0 2rem;
+  padding: 5rem 0 1rem;
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.landing_page p.banniere {
+  width: 100%;
+  background-color: var(--bleu-color);
+  color: var(--main-bg-color);
+  font-family: --;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-family: var(--font-hind);
+  font-weight: 600;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+}
+.landing_page h1 {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.landing_page h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.landing_page h1, .landing_page h2 {
+  background-color: transparent;
+  padding: 0rem 1rem;
+  z-index: 1;
+  margin: 0;
+  color: var(--white);
+  font-weight:500;
+}
+
+  .background_img {
+    position: absolute;
+    background-position: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .veil {
+    position: absolute;
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+  }
+
+.home_button_container {
+z-index: 1;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+background-color: transparent;
+margin: 2rem 0;
+}
+
+.home_button_container img {
+  background-color: transparent;
+  margin-left: 1rem;
+}
+
+.home_button_container button {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  color: var(--main-bg-color);
+  background-color: transparent;
+  border: 2px white solid;
+  font-size: 1rem;
+  font-family: var(--font-hind);
+}
+
+.home_button_container a:first-of-type button {
+  background-color: var(--rouge-color);
+  border: none;
+}
+
+
+.carousel_home_img_gootsa {
+  width: 50%;
+  height: fit-content;
+}
+
+.home_carousel_container_gootsa div.formules_explications{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.home_carousel_container_gootsa div.formules_explications div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: fit-content;
+  text-align: center;
+  padding: 0 7rem;
+  border-radius: 0.5rem;
+}
+.home_carousel_container_gootsa div.formules_explications * , .home_carousel_container_gootsa div.formules_explications div * {
+  background-color: #FEF8F1;
+}
+
+.home_carousel_container_gootsa div.formules_explications > div > h3 {
+  top: 0.5rem;
+  position:absolute;
+  background-color: transparent;
+  width: fit-content;
+  color: var(--vert-color);
+  font-size: 2.6rem;
+  text-align: center;
+
+}
+
+.home_carousel_container_gootsa div h3, .home_carousel_container_gootsa div h4 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+}
+
+.home_carousel_container_gootsa div h4 {
+  margin: 1.5rem 0;
+  color: var(--marron-color);
+}
+
+.home_carousel_container_gootsa div h3 {
+  color: var(--vert-color);
+}
+
+.home_carousel_container_gootsa div img {
+  width: 15vw;
+}
+
+.home_carousel_container_gootsa div p {
+  padding: 2rem 1rem 3rem;
+}
+
+.alice-carousel__prev-btn, .alice-carousel__next-btn {
+  position: absolute;
+  top: 35%;
+}
+
+.home_carousel_container_gootsa {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.alice-carousel__prev-btn {
+  left: -7.5rem;
+  transform: translateX(-70%);
+}
+
+.alice-carousel__next-btn {
+  right:-7.5rem;
+  transform: translateX(70%);
+
+}
+
+.alice-carousel__prev-btn, .alice-carousel__next-btn, .alice-carousel__prev-btn *, .alice-carousel__next-btn * {
+  background-color: transparent;
+}
+
+
+.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item {
+  font-size: 3.5rem;
+}
+
+.alice-carousel__stage {
+  padding: 0rem;
+}
+
 .propos, .propos *, .infosPratiques_container, .infosPratiques_container * {
   overflow: hidden;
 }

@@ -35,10 +35,7 @@ export default function Home({ helmet, langue }) {
         <p className="p">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum
           inventore culpa quas repellat accusamus, omnis odit recusandae
-          nostrum? Fugiat veritatis totam reprehenderit. Quaerat sed mollitia
-          vitae, dolor nobis pariatur deserunt facilis id esse ex obcaecati et?
-          Omnis, porro voluptatem doloremque quasi nemo natus dolorum hic ad,
-          quo, ab maiores.
+          nostrum? Fugiat veritatis totam reprehenderit.
         </p>
       </div>
     </div>,
@@ -55,10 +52,7 @@ export default function Home({ helmet, langue }) {
         <p className="p">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum
           inventore culpa quas repellat accusamus, omnis odit recusandae
-          nostrum? Fugiat veritatis totam reprehenderit. Quaerat sed mollitia
-          vitae, dolor nobis pariatur deserunt facilis id esse ex obcaecati et?
-          Omnis, porro voluptatem doloremque quasi nemo natus dolorum hic ad,
-          quo, ab maiores.
+          nostrum? Fugiat veritatis totam reprehenderit.
         </p>
       </div>
     </div>,
@@ -94,6 +88,12 @@ export default function Home({ helmet, langue }) {
       .then((data2) => prepareData2(data2.data));
   }, []);
 
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 2.5 },
+    1024: { items: 2.5 },
+  };
+
   return (
     <main>
       <Helmet>
@@ -108,7 +108,12 @@ export default function Home({ helmet, langue }) {
         <p>{data[1].p1}</p>
       </section>
       <section className="home_carousel_container_gootsa">
-        <AliceCarousel mouseTracking items={items} disableDotsControls />
+        <AliceCarousel
+          mouseTracking
+          items={items}
+          disableDotsControls
+          responsive={responsive}
+        />
       </section>
       <section className="section">
         <h2>{data[2][0].h2}</h2>
