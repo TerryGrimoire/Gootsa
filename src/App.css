@@ -1277,6 +1277,46 @@ margin: 2rem 0;
   padding: 0 5rem;
 }
 
+/********************************************************************* MENU *********************************************************************/ 
+
+.menu_du_jour {
+display: flex;
+margin: 0 2rem;
+border-radius: 2rem 2rem 0 0;
+justify-content: flex-start;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.menu_container_boissons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--light-color);
+  margin: 0 2rem ;
+  border-radius: 0 0 2rem 2rem;
+}
+.menu_du_jour > div ,  .menu_container_boissons > section {
+  width: 50%;
+  padding: 2rem 4rem;
+}
+
+.menu_du_jour > div:nth-child(2n-1) ,  .menu_container_boissons > section:nth-child(2n-1) {
+
+  border-right: lightgray solid 1px; 
+}
+
+.menu_du_jour > div > div > p:last-of-type {
+ width: 80%;
+}
+
+.menu_top  {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+
 /********************************************************************* FOOTER *********************************************************************/ 
 .footer * {
   align-items: center;
