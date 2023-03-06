@@ -54,7 +54,7 @@ function Contact({ helmet, langue }) {
   };
 
   return (
-    <div className="contact">
+    <main className="contact">
       <Helmet>
         <title> {helmet.title} | Contact </title>
         <link rel="canonical" href={`${helmet.href}/Services`} />
@@ -141,7 +141,7 @@ function Contact({ helmet, langue }) {
           />
         </form>
       </section>
-    </div>
+    </main>
   );
 }
 

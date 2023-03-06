@@ -80,7 +80,7 @@ function Services({ helmet }) {
     (menu) => menu.Type === "Boissons" && menu.Debut !== undefined
   );
   return (
-    <div>
+    <main>
       <Helmet>
         <title> {helmet.title} | Services </title>
         <link rel="canonical" href={`${helmet.href}/Services`} />
@@ -191,7 +191,7 @@ function Services({ helmet }) {
           corporis nemo corrupti! Labore repudiandae vel neque.
         </p>
       </section>
-    </div>
+    </main>
   );
 }
 

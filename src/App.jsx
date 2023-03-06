@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
 
 import whatsapp from "./assets/whatsapp.png";
+import iconeLangue from "./assets/langue.png";
 
 import "./App.css";
 
@@ -21,6 +22,12 @@ function App() {
   };
 
   const [langue, setLangue] = useState("fr");
+
+  const handleClick = () => {
+    if (langue === "fr") {
+      setLangue("re");
+    } else setLangue("fr");
+  };
 
   return (
     <BrowserRouter>
@@ -43,12 +50,20 @@ function App() {
             <Route path="/Mentions" element={<Mentions />} />
           </Routes>
           <a
-            href="https://api.whatsapp.com/send?phone=+262693770219&text=Bonjour"
-            className="whatsapp"
+            href="https://api.whatsapp.com/send?phone=+2626937702 vhb19&text=Bonjour"
+            className="whatsapp mobile"
           >
             {" "}
             <img src={whatsapp} alt="Logo WhatsApp" />{" "}
           </a>
+          <button
+            type="button"
+            className="whatsapp desktop"
+            onClick={handleClick}
+          >
+            <img src={iconeLangue} alt="icone pour la langue" />
+            {langue === "fr" ? "Kréol" : "Français"}
+          </button>
           <Footer langue={langue} />
         </div>
       </HelmetProvider>

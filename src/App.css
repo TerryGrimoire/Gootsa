@@ -37,6 +37,9 @@
   box-sizing: border-box;
   background-color: var(--main-bg-color);
   font-family: var(--font-text);
+}
+
+main, main * {
   overflow-x: hidden;
 }
 
@@ -915,14 +918,74 @@ color: var(--bleu-color);
 
 /********************************************************************* NAVBAR *********************************************************************/ 
 .navbar {
-  padding: 2rem 0;
-
+  padding: 2rem;
+ 
 }
 
 .navbar * {
   padding: 0rem 2rem;
+  font-weight: bold;
+  color: var(--marron-color);
 }
 
+.navbar .blue {
+  color: var(--bleu-color);
+}
+.precommande {
+display: flex;
+justify-content: center;
+align-items: center;
+width: fit-content;
+position: absolute;
+right: 2rem;
+color: var(--marron-color);
+}
+
+.precommande span {
+  font-weight: 600;
+}
+
+.precommande a {
+  text-decoration: underline;
+}
+
+.precommande img {
+  margin-right: 0.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  position: sticky;
+  padding: 0rem 2rem;
+}
+
+header .languages button {
+  width: 2.5rem;
+  height: 1.5rem;
+}
+
+.whatsapp {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 7rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--marron-color);
+  color:var(--light-color);
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+.whatsapp img {
+  background-color: transparent;
+  width: auto;
+  height: 1.5rem;
+  border-radius: 0;
+  padding: 0;
+}
 /********************************************************************* HOME *********************************************************************/ 
 
 
@@ -960,7 +1023,7 @@ color: var(--bleu-color);
 }
 
 .landing_page h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 .landing_page h1, .landing_page h2 {
@@ -1014,6 +1077,7 @@ margin: 2rem 0;
   border: 2px white solid;
   font-size: 1rem;
   font-family: var(--font-hind);
+  font-weight: bold;
 }
 
 .home_button_container a:first-of-type button {
@@ -1181,9 +1245,10 @@ margin: 2rem 0;
   flex-wrap: wrap;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   height: fit-content;
   width: 100%;
+  padding: 0;
 }
 .infosPratiques_container h2 {
   width: 100%;
@@ -1205,5 +1270,36 @@ margin: 2rem 0;
   flex-direction: column;
   padding: 2rem 4rem;
 
+}
+
+.paiement {
+  margin: 0 2rem 4rem;
+  padding: 0 5rem;
+}
+
+/********************************************************************* FOOTER *********************************************************************/ 
+.footer * {
+  align-items: center;
+  justify-content: center;
+}
+
+.footer > img {
+  width: 10rem;
+  height: auto;
+}
+.footer .reseaux_sociaux {
+  justify-content: center;
+}
+
+.footer .reseaux_sociaux img {
+  margin: 0 0.5rem;
+}
+
+.footer .mentions_container *{
+  margin: 0 0.5rem;
+}
+
+.footer small.reference {
+  margin: 0;
 }
 }

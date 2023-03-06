@@ -37,7 +37,7 @@ function Footer() {
         </Link>
       </div>
       <small className="reference">
-        Site développé par le{" "}
+        Site développé et traduit par le{" "}
         <a
           target="_blank"
           href="https://grimoire-numerique.re/"
@@ -48,14 +48,6 @@ function Footer() {
         . Design par{" "}
         <a target="_blank" href="https://www.jayce.re/" rel="noreferrer">
           Jayce Salez
-        </a>
-        . Traduit par{" "}
-        <a
-          target="_blank"
-          href="https://www.terry-grimoire.fr/"
-          rel="noreferrer"
-        >
-          Terry Grimoire
         </a>
         .
       </small>

@@ -18,7 +18,7 @@ function Mentions() {
   };
 
   return (
-    <div className="mentions-container">
+    <main className="mentions-container">
       <h2>Mentions Légales</h2>
       <p>
         <b>Client :</b> tout professionnel ou personne physique capable au sens
@@ -619,7 +619,7 @@ function Mentions() {
         pas, il est fait attribution exclusive de juridiction aux tribunaux
         compétents de Nantes
       </p>
-    </div>
+    </main>
   );
 }
 
