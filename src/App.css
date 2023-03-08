@@ -540,10 +540,11 @@ overflow: visible;
 /********************************************************************* MENU *********************************************************************/ 
 
 .menu_top {
-  margin: 0.5rem 0;
+  margin: 2rem 0 0;
+  height: fit-content;
 }
 
-.menu_top p {
+.menu_top0 > p {
   background-color: var(--button-burger);
   color: var(--marron-color);
   padding: 1.5rem 1rem;
@@ -551,14 +552,16 @@ overflow: visible;
   text-align: center;
   font-family: var(--font-hind);
   font-weight: 500;
+  margin-top: 1rem;
 }
 
-.menu_top h1 {
+.menu_top > h1.menu_top_h1 {
   font-size: 2.6rem;
   text-align: center;
-  margin: 1rem;
+  margin: 2rem;
   font-weight: bold;
   color: var(--bleu-color);
+  padding: 2rem;
 }
 
 .menu, .menu * {
@@ -607,6 +610,11 @@ overflow: visible;
   align-items: center;
 }
 
+.menu_du_jour > div:nth-child(2n-1) {
+  border-bottom: 1px #40363019 solid ;
+  margin-bottom: 1rem;
+}
+
 .menu_du_jour > div h2 , .menu_du_jour > div h3 {
   color: var(--rouge-color);
 }
@@ -621,6 +629,10 @@ color: var(--bleu-color);
 
 .menu_desserts h3, .menu_boissons h3 {
 font-weight: bold;
+}
+
+.menu_desserts > div:nth-child(2n-1) {
+  border-bottom: 1px solid #40363019;
 }
 
 .menu_suivant, .menu_suivant * {
@@ -1296,14 +1308,18 @@ flex-wrap: wrap;
   margin: 0 2rem ;
   border-radius: 0 0 1rem 1rem;
 }
-.menu_du_jour > div ,  .menu_container_boissons > section {
+.menu_du_jour > div{
   width: 50%;
-  padding: 2rem 4rem;
+  padding: 2rem;
+}
+ .menu_container_boissons section {
+  width: 50%;
+  padding: 2rem;
 }
 
 .menu_du_jour > div:nth-child(2n-1) ,  .menu_container_boissons > section:nth-child(2n-1) {
 
-  border-right: lightgray solid 1px; 
+  border-right: #40363019 solid 1px; 
 }
 
 .menu_du_jour > div > div > p:last-of-type {
@@ -1331,7 +1347,7 @@ flex-wrap: wrap;
 }
 
 .menu_suivant > div > div:nth-child(2n-1) {
-  border-right: 1px lightgray solid;
+  border-right: 1px #40363019 solid;
 
 }
 
@@ -1343,6 +1359,16 @@ flex-wrap: wrap;
   margin: 2rem;
   padding: 3rem;
   border-radius: 1rem;
+}
+
+.menu_du_jour > div:nth-child(2n-1) {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.menu_desserts > div:nth-child(2n-1) {
+  border-bottom: none ;
+  margin-bottom: 1rem;
 }
 
 /********************************************************************* FOOTER *********************************************************************/ 

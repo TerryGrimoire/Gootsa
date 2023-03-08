@@ -89,17 +89,17 @@ function Services({ helmet }) {
         <meta name="description" content={helmet.description} />
       </Helmet>
 
-      <section>
+      <section className="menu_top0">
         <AliceCarousel mouseTracking items={items} disableDotsControls />
-      </section>
-      <section className="menu_top">
         <p>
           Nos offres ne contiennent pas de protéines animales. Elles sont
           réfléchies pour allier apport énergétique essentiel et saveurs
           locales.
         </p>
-        <h1 className="menu_top_h1 mobile">Au Menu</h1>
-        <h1 className="menu_top_h1 desktop">Au Menu du {todaay}</h1>
+      </section>
+      <section className="menu_top">
+        <h1 className="menu_top_h1 mobile">Au menu</h1>
+        <h1 className="menu_top_h1 desktop">Au menu du {todaay}</h1>
       </section>
       <section className="menu_du_jour menu">
         {menus &&
