@@ -50,11 +50,13 @@ function Services({ helmet }) {
 
   const menus = JSON.parse(sessionStorage.getItem("menus"));
   let today = new Date();
+  let todaay = new Date();
   const dd = String(today.getDate()).padStart(2, "0");
   const mm = String(today.getMonth() + 1).padStart(2, "0"); // January is 0!
   const yyyy = today.getFullYear();
 
   today = `${yyyy}${mm}${dd}`;
+  todaay = `${dd}/${mm}`;
 
   const menuDuJour = menus.filter(
     (menu) =>
@@ -97,7 +99,7 @@ function Services({ helmet }) {
           locales.
         </p>
         <h1 className="menu_top_h1 mobile">Au Menu</h1>
-        <h1 className="menu_top_h1 desktop">Au Menu du {today}</h1>
+        <h1 className="menu_top_h1 desktop">Au Menu du {todaay}</h1>
       </section>
       <section className="menu_du_jour menu">
         {menus &&
@@ -165,26 +167,29 @@ function Services({ helmet }) {
 
       {menuSuivant.length > 0 && (
         <section className="menu menu_suivant">
-          <h2 className="h1">Au menu</h2>
-          {menuSuivant.map((el) => (
-            <div key={el.id}>
-              <h2>
-                {(el.Debut.charAt(0).toUpperCase() + el.Debut.slice(1))
-                  .replace("/2023", "")
-                  .replace("/2024", "")
-                  .replace("/2025", "")
-                  .replace("/2026", "")
-                  .replace("/2027", "")
-                  .replace("/2028", "")
-                  .replace("/2029", "")
-                  .replace("/2030", "")}
-              </h2>
-              <div>
-                <h3>{el.Plat}</h3>
-                <p>{el.Description}</p>
+          <h2 className="h1 mobile">Au menu</h2>
+          <h2 className="h1">À venir</h2>
+          <div>
+            {menuSuivant.map((el) => (
+              <div key={el.id}>
+                <h2>
+                  {(el.Debut.charAt(0).toUpperCase() + el.Debut.slice(1))
+                    .replace("/2023", "")
+                    .replace("/2024", "")
+                    .replace("/2025", "")
+                    .replace("/2026", "")
+                    .replace("/2027", "")
+                    .replace("/2028", "")
+                    .replace("/2029", "")
+                    .replace("/2030", "")}
+                </h2>
+                <div>
+                  <h3>{el.Plat}</h3>
+                  <p>{el.Description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
       )}
 
