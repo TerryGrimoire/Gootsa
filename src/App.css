@@ -1353,7 +1353,7 @@ flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:60vh;
+  height:50vh;
   overflow: hidden;
   padding:0rem 2rem;
 }
@@ -1371,6 +1371,7 @@ flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 0.5rem;
 }
 
 .menu_top0 div.p_container p {
@@ -1394,11 +1395,11 @@ flex-wrap: wrap;
 
 .menu_top0 div.alice-carousel__prev-btn {
   margin: 0;
-  left: -32.5vw;
+  left: calc(-38vw/2)
 }
 
 .menu_top0 .alice-carousel__next-btn {
-  right: -32.5vw;
+  right: calc(-38vw/2)
 }
 .menu_top0 .alice-carousel__prev-btn-item, .menu_top0 .alice-carousel__next-btn-item {
   font-size: 5rem;
@@ -1415,14 +1416,14 @@ flex-wrap: wrap;
   margin: 2rem;
   font-weight: bold;
   color: var(--bleu-color);
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 }
 
 
 .menu_top  {
   text-align: center;
   width: 100%;
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 
 .menu_suivant {
