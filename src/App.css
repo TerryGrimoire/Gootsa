@@ -615,7 +615,7 @@ overflow: visible;
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--marron-color);
-  width: 10%
+  width: fit-content
 }
 .menu div.prix h3 {
   width: 80%;
