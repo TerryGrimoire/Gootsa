@@ -406,28 +406,28 @@ overflow: visible;
   padding: 2rem 1rem 3rem;
 }
 
-.alice-carousel__prev-btn, .alice-carousel__next-btn {
+.home_carousel_container_gootsa .alice-carousel__prev-btn, .alice-carousel__next-btn {
   position: absolute;
   top: 28%;
 }
 
-.alice-carousel__prev-btn {
+.home_carousel_container_gootsa .alice-carousel__prev-btn {
   left: 0;
   transform: translateX(-70%);
 }
 
-.alice-carousel__next-btn {
+.home_carousel_container_gootsa .alice-carousel__next-btn {
   right: 0;
   transform: translateX(70%);
 
 }
 
-.alice-carousel__prev-btn, .alice-carousel__next-btn, .alice-carousel__prev-btn *, .alice-carousel__next-btn * {
+.home_carousel_container_gootsa .alice-carousel__prev-btn, .home_carousel_container_gootsa .alice-carousel__next-btn, .home_carousel_container_gootsa .alice-carousel__prev-btn *, .home_carousel_container_gootsa .alice-carousel__next-btn * {
   background-color: transparent;
 }
 
 
-.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item {
+.home_carousel_container_gootsa .alice-carousel__prev-btn-item, .home_carousel_container_gootsa .alice-carousel__next-btn-item {
   font-size: 3.5rem;
 }
 
@@ -538,13 +538,10 @@ overflow: visible;
   width: 2.5rem;
 }
 /********************************************************************* MENU *********************************************************************/ 
-
-.menu_top {
-  margin: 2rem 0 0;
-  height: fit-content;
+.menu_top0 .alice-carousel *  {
+  overflow: visible;
 }
-
-.menu_top0 > p {
+.menu_top0 div.p_container {
   background-color: var(--button-burger);
   color: var(--marron-color);
   padding: 1.5rem 1rem;
@@ -554,6 +551,32 @@ overflow: visible;
   font-weight: 500;
   margin-top: 1rem;
 }
+.menu_top0 div.p_container *  {
+  background-color: inherit;
+  color: inherit;
+}
+.menu_top0 .alice-carousel__next-btn, .menu_top0 div.alice-carousel__prev-btn {
+  background-color: transparent;
+  top: 35%;
+  position: absolute;
+}
+
+.menu_top0 div.alice-carousel__prev-btn {
+  margin: 0;
+  left: -32.5vw;
+}
+
+.menu_top0 .alice-carousel__next-btn {
+  right: -32.5vw;
+}
+.menu_top0 .alice-carousel__prev-btn-item, .menu_top0 .alice-carousel__next-btn-item {
+  font-size: 5rem;
+  color: var(--white);
+}
+
+.menu_top0 .alice-carousel div, .menu_top0 .alice-carousel div *   {
+  background-color: transparent;
+}
 
 .menu_top > h1.menu_top_h1 {
   font-size: 2.6rem;
@@ -561,7 +584,7 @@ overflow: visible;
   margin: 2rem;
   font-weight: bold;
   color: var(--bleu-color);
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .menu, .menu * {
@@ -1161,7 +1184,7 @@ margin: 2rem 0;
   padding: 2rem 1rem 3rem;
 }
 
-.alice-carousel__prev-btn, .alice-carousel__next-btn {
+.home_carousel_container_gootsa .alice-carousel__prev-btn, .home_carousel_container_gootsa .alice-carousel__next-btn {
   position: absolute;
   top: 35%;
 }
@@ -1172,27 +1195,27 @@ margin: 2rem 0;
   align-self: center;
 }
 
-.alice-carousel__prev-btn {
+.home_carousel_container_gootsa .alice-carousel__prev-btn {
   left: -7.5rem;
   transform: translateX(-70%);
 }
 
-.alice-carousel__next-btn {
+.home_carousel_container_gootsa .alice-carousel__next-btn {
   right:-7.5rem;
   transform: translateX(70%);
 
 }
 
-.alice-carousel__prev-btn, .alice-carousel__next-btn, .alice-carousel__prev-btn *, .alice-carousel__next-btn * {
+.home_carousel_container_gootsa .alice-carousel__prev-btn, .home_carousel_container_gootsa .alice-carousel__next-btn, .home_carousel_container_gootsa .alice-carousel__prev-btn *, .home_carousel_container_gootsa .alice-carousel__next-btn * {
   background-color: transparent;
 }
 
 
-.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item {
+.home_carousel_container_gootsa .alice-carousel__prev-btn-item, .home_carousel_container_gootsa .alice-carousel__next-btn-item {
   font-size: 3.5rem;
 }
 
-.alice-carousel__stage {
+.home_carousel_container_gootsa .alice-carousel__stage {
   padding: 0rem;
 }
 
@@ -1290,7 +1313,6 @@ margin: 2rem 0;
 }
 
 /********************************************************************* MENU *********************************************************************/ 
-
 .menu_du_jour {
 display: flex;
 margin: 0 2rem;
@@ -1325,6 +1347,77 @@ flex-wrap: wrap;
 .menu_du_jour > div > div > p:last-of-type {
  width: 80%;
 }
+
+.menu_top0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:60vh;
+  overflow: hidden;
+  padding:0rem 2rem;
+}
+
+.menu_top0 > *, .menu_top .alice-carousel{
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.menu_top0 div.p_container {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_top0 div.p_container p {
+  padding: 1rem 8vw
+}
+.menu_top .alice-carousel, .menu_top .alice-carousel  * {
+  overflow: hidden;
+}
+.menu_top0 img.menu_img {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.menu_top0 .alice-carousel__next-btn, .menu_top0 div.alice-carousel__prev-btn {
+  background-color: transparent;
+  top: 35%;
+  position: absolute;
+}
+
+.menu_top0 div.alice-carousel__prev-btn {
+  margin: 0;
+  left: -32.5vw;
+}
+
+.menu_top0 .alice-carousel__next-btn {
+  right: -32.5vw;
+}
+.menu_top0 .alice-carousel__prev-btn-item, .menu_top0 .alice-carousel__next-btn-item {
+  font-size: 5rem;
+  color: var(--white);
+}
+
+.menu_top0 .alice-carousel div, .menu_top0 .alice-carousel div *   {
+  background-color: transparent;
+}
+
+.menu_top > h1.menu_top_h1 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 2rem;
+  font-weight: bold;
+  color: var(--bleu-color);
+  padding: 0 2rem;
+}
+
 
 .menu_top  {
   text-align: center;

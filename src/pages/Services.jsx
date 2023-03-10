@@ -5,6 +5,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 import image from "../assets/takeaway.png";
+import feuille from "../assets/feuille.png";
 
 function Services({ helmet }) {
   const prepareData2 = (data2) => {
@@ -44,8 +45,9 @@ function Services({ helmet }) {
     <img
       src={image}
       alt="fond d'écran avec un restaurant et de la nourriture"
+      className="menu_img"
     />,
-    <img src="" alt="" />,
+    <img src={image} alt="fbhhh" className="menu_img" />,
   ];
 
   const menus = JSON.parse(sessionStorage.getItem("menus"));
@@ -81,6 +83,12 @@ function Services({ helmet }) {
   const menuBoissons = menus.filter(
     (menu) => menu.Type === "Boissons" && menu.Debut !== undefined
   );
+
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 1 },
+    1024: { items: 1 },
+  };
   return (
     <main>
       <Helmet>
@@ -90,12 +98,20 @@ function Services({ helmet }) {
       </Helmet>
 
       <section className="menu_top0">
-        <AliceCarousel mouseTracking items={items} disableDotsControls />
-        <p>
-          Nos offres ne contiennent pas de protéines animales. Elles sont
-          réfléchies pour allier apport énergétique essentiel et saveurs
-          locales.
-        </p>
+        <AliceCarousel
+          mouseTracking
+          items={items}
+          disableDotsControls
+          responsive={responsive}
+        />
+        <div className="p_container">
+          <img src={feuille} alt="feuille marron" className="desktop" />
+          <p>
+            Nos offres ne contiennent pas de protéines animales. Elles sont
+            réfléchies pour allier apport énergétique essentiel et saveurs
+            locales.
+          </p>
+        </div>
       </section>
       <section className="menu_top">
         <h1 className="menu_top_h1 mobile">Au menu</h1>
