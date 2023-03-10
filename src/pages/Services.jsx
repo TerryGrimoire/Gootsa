@@ -184,7 +184,7 @@ function Services({ helmet }) {
       {menuSuivant.length > 0 && (
         <section className="menu menu_suivant">
           <h2 className="h1 mobile">Au menu</h2>
-          <h2 className="h1">À venir</h2>
+          <h2 className="h1 desktop">À venir</h2>
           <div>
             {menuSuivant.map((el) => (
               <div key={el.id}>
