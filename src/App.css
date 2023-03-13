@@ -143,6 +143,7 @@ li {
   color: var(--white);
   font-family: var(--font-hind);
   font-size: 1rem; 
+  font-weight: bold;
 }
  
 .messagedefilant div {
@@ -832,7 +833,7 @@ margin-top: 2rem;
   margin-bottom: 0rem;
 }
 
-.contact .form {
+.contact form {
   padding: 1rem;
   width: 100%;
 }
@@ -940,7 +941,8 @@ margin-top: 2rem;
   color: #E36325;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  text-decoration: underline
+  text-decoration: underline;
+  line-height: 1.6;
 }
 
 .footer .reference a {
