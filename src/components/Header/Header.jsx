@@ -17,14 +17,6 @@ function Burger({ helmet, setLangue }) {
       <div className="desktop">
         <Navbar setOpenBurger={setOpenBurger} />
       </div>
-      <div className="languages mobile">
-        <button type="button" onClick={() => setLangue("re")}>
-          RE
-        </button>
-        <button type="button" onClick={() => setLangue("fr")}>
-          FR
-        </button>
-      </div>
       <button
         type="button"
         onClick={() => setOpenBurger(!openBurger)}
@@ -35,7 +27,9 @@ function Burger({ helmet, setLangue }) {
           alt="menu de navigation sur le site internet - trois lignes de navigation"
         />
       </button>
-      {openBurger && <Nav setOpenBurger={setOpenBurger} />}
+      {openBurger && (
+        <Nav setOpenBurger={setOpenBurger} setLangue={setLangue} />
+      )}
       <div className="desktop precommande">
         <img src={precommande} alt="icone petit telephone" />
         <p>

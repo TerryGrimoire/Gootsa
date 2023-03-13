@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import croix from "../../assets/fermer.png";
 
-function Nav({ setOpenBurger }) {
+function Nav({ setOpenBurger, setLangue }) {
   return (
     <nav className="flex-col openBurger justify-between">
       <button
@@ -27,6 +27,15 @@ function Nav({ setOpenBurger }) {
           Accès / Contact
         </button>
       </Link>
+      <div className="languages mobile">
+        <p>Langue :</p>
+        <button type="button" onClick={() => setLangue("re")}>
+          RE
+        </button>
+        <button type="button" onClick={() => setLangue("fr")}>
+          FR
+        </button>
+      </div>
     </nav>
   );
 }

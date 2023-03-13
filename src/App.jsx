@@ -64,7 +64,7 @@ function App() {
             <img src={iconeLangue} alt="icone pour la langue" />
             {langue === "fr" ? "Kréol" : "Français"}
           </button>
-          <Footer langue={langue} />
+          <Footer langue={langue} setLangue={setLangue} />
         </div>
       </HelmetProvider>
     </BrowserRouter>

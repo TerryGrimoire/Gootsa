@@ -5,7 +5,7 @@ import facebook from "../../assets/facebook.png";
 import instagram from "../../assets/instagram.png";
 import region from "../../assets/region.png";
 
-function Footer() {
+function Footer({ setLangue }) {
   return (
     <footer className="footer">
       <img src={logo} alt="logo de Gootsa" />
@@ -51,6 +51,15 @@ function Footer() {
         </a>
         .
       </small>
+      <div className="languages mobile">
+        <small>Langue :</small>
+        <button type="button" onClick={() => setLangue("re")}>
+          RE
+        </button>
+        <button type="button" onClick={() => setLangue("fr")}>
+          FR
+        </button>
+      </div>
       <small>Réalisé avec le soutien de la Région Réunion.</small>
       <img src={region} alt="Logo Region Réunion" className="region" />
     </footer>
