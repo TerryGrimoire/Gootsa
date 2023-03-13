@@ -24,7 +24,10 @@ function InfosPratiques({ langue }) {
       <div>
         <img src={data[3].img2} alt="calendrier" />
         <p>
-          <span>{data[3].p3}</span> {data[3].p4}
+          <span>{data[3].p3}</span> {data[3].p4}{" "}
+          <span className="exceptionnel desktop">
+            {location.pathname === "/" ? "" : data[3].p9}
+          </span>
         </p>
       </div>
       <div>

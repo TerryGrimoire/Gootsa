@@ -11,7 +11,7 @@ import dataFR from "../data/dataFR";
 import dataRE from "../data/dataRE";
 
 import vegebon from "../assets/vegebon.png";
-import cafet from "../assets/cafet.png";
+import cafet from "../assets/cafet1.png";
 
 export default function Home({ helmet, langue }) {
   useEffect(() => {
