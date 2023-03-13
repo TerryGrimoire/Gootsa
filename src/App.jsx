@@ -34,6 +34,18 @@ function App() {
       <HelmetProvider>
         <div className="container">
           <Header helmet={helmet} langue={langue} setLangue={setLangue} />
+          <div className="messagedefilant">
+            <div
+              data-text="Ne ratez pas la nocture de ce vendredi, jusqu'à 21h ! TradiBon et
+            riz chauffé au menu."
+            >
+              <span>
+                Ne ratez pas la nocture de ce vendredi, jusqu'à 21h ! TradiBon
+                et riz chauffé au menu.
+              </span>
+            </div>
+          </div>
+
           <Routes>
             <Route
               path="/"
