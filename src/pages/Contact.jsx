@@ -90,36 +90,32 @@ function Contact({ helmet, langue }) {
       </section>
 
       <section className="form">
-        <h2>Nous écrire</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi a, eum
-          fugiat numquam labore tenetur reiciendis quaerat dolore ipsam iste.
-          Nihil tempora in doloribus obcaecati.
-        </p>
+        <h2>{data[5].h2}</h2>
+        <p>{data[5].p1}</p>
         <form action="submit" onSubmit={handleSubmit(onSubmit)} id="myForm">
           <label htmlFor="Nom">
             {" "}
-            Nom
+            {data[5].nom}
             <input type="text" {...register("nom", { required: true })} />
           </label>
           {errors.nom && <p>Le nom est obligatoire.</p>}
           <label htmlFor="Prenom">
             {" "}
-            Prénom
+            {data[5].prenom}
             <input type="text" {...register("prenom", { required: true })} />
           </label>
           {errors.prenom && <p>Le prénom est obligatoire.</p>}
 
           <label htmlFor="mail">
             {" "}
-            Adresse e-mail
+            {data[5].email}
             <input type="text" {...register("email", { required: true })} />
           </label>
           {errors.email && <p>L'adresse e-mail est obligatoire.</p>}
 
           <label htmlFor="Texte">
             {" "}
-            Message
+            {data[5].message}
             <textarea
               name="texte"
               id=""
@@ -132,12 +128,10 @@ function Contact({ helmet, langue }) {
 
           <label htmlFor="check">
             <input type="checkbox" {...register("check", { required: true })} />
-            J'accepte que les informations renseignées soient utilisées pour me
-            contacter dans le cadre d'un démarcharge commercial (devis, offre,
-            renseignement...).
+            {data[5].condition}
           </label>
 
-          <button type="submit">Envoyer le message</button>
+          <button type="submit">{data[5].bouton}</button>
           <ToastContainer
             position="bottom-right"
             autoClose={5000}

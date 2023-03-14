@@ -5,12 +5,16 @@ import facebook from "../../assets/facebook.png";
 import instagram from "../../assets/instagram.png";
 import region from "../../assets/region.png";
 
-function Footer({ setLangue }) {
+import dataFR from "../../data/dataFR";
+import dataRE from "../../data/dataRE";
+
+function Footer({ setLangue, langue }) {
+  const data = langue === "fr" ? dataFR : dataRE;
   return (
     <footer className="footer">
       <img src={logo} alt="logo de Gootsa" />
       <div className="reseaux_sociaux">
-        <small>Suivez-nous sur les réseaux :</small>
+        <small>{data[4].p1}</small>
         <a
           target="_blank"
           href="https://www.facebook.com/GootsaTawar"
@@ -30,14 +34,14 @@ function Footer({ setLangue }) {
       </div>
       <div className="mentions_container">
         <Link to="/Mentions">
-          <small className="small">Mentions Légales</small>
+          <small className="small">{data[4].p2}</small>
         </Link>
         <Link to="/Mentions">
-          <small className="small">Politique de confidentialité</small>
+          <small className="small">{data[4].p3}</small>
         </Link>
       </div>
       <small className="reference">
-        Site développé et traduit par le{" "}
+        {data[4].p4}{" "}
         <a
           target="_blank"
           href="https://grimoire-numerique.re/"
@@ -45,7 +49,7 @@ function Footer({ setLangue }) {
         >
           Grimoire Numérique
         </a>
-        . Design par{" "}
+        . {data[4].p5}{" "}
         <a target="_blank" href="https://www.jayce.re/" rel="noreferrer">
           Jayce Salez
         </a>
@@ -60,7 +64,7 @@ function Footer({ setLangue }) {
           FR
         </button>
       </div>
-      <small>Réalisé avec le soutien de la Région Réunion.</small>
+      <small>{data[4].p6}</small>
       <img src={region} alt="Logo Region Réunion" className="region" />
     </footer>
   );

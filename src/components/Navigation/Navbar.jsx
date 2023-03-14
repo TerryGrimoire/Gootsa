@@ -1,19 +1,19 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ langue }) {
   const location = useLocation();
   const loc = location.pathname;
   return (
     <nav className="flex justify-between navbar">
       <Link to="/" className={loc === "/" ? "blue" : ""}>
-        Accueil
+        {langue === "fr" ? "Accueil" : "Lakèy"}
       </Link>
       <Link to="/Menu" className={loc === "/Menu" ? "blue" : ""}>
-        Menu
+        {langue === "fr" ? "Menu" : "Nout Menu"}
       </Link>
       <Link to="/Contact" className={loc === "/Contact" ? "blue" : ""}>
-        Accès / Contact
+        {langue === "fr" ? "Accès / Contact" : "Aksé / Kontakt"}
       </Link>
     </nav>
   );

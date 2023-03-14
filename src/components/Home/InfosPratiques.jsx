@@ -21,12 +21,14 @@ function InfosPratiques({ langue }) {
           <a href="tel:+262693770219">0693770219</a>
         </p>
       </div>
-      <div>
+      <div className="exceptionel_container">
         <img src={data[3].img2} alt="calendrier" />
         <p>
-          <span>{data[3].p3}</span> {data[3].p4}{" "}
+          <span>{data[3].p3}</span>{" "}
+          <span className="exceptionnel mobile">{data[3].p4}</span>{" "}
+          {location.pathname === "/" ? data[3].p4 : ""}{" "}
           <span className="exceptionnel desktop">
-            {location.pathname === "/" ? "" : data[3].p9}
+            {location.pathname === "/" ? "" : data[3].p9b}
           </span>
         </p>
       </div>

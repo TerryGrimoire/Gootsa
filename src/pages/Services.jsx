@@ -7,7 +7,12 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import image from "../assets/takeaway.png";
 import feuille from "../assets/feuille.png";
 
-function Services({ helmet }) {
+import dataFR from "../data/dataFR";
+import dataRE from "../data/dataRE";
+
+function Services({ helmet, langue }) {
+  const data = langue === "fr" ? dataFR : dataRE;
+
   const prepareData2 = (data2) => {
     // j correspond aux lignes de A à ZZZ sur fichier Excel
     // index
@@ -106,32 +111,36 @@ function Services({ helmet }) {
         />
         <div className="p_container">
           <img src={feuille} alt="feuille marron" className="desktop" />
-          <p>
-            Nos offres ne contiennent pas de protéines animales. Elles sont
-            réfléchies pour allier apport énergétique essentiel et saveurs
-            locales.
-          </p>
+          <p>{data[6].p1}</p>
         </div>
       </section>
       <section className="menu_top">
-        <h1 className="menu_top_h1 mobile">Au menu</h1>
-        <h1 className="menu_top_h1 desktop">Au menu du {todaay}</h1>
+        <h1 className="menu_top_h1 mobile">{data[6].p22}</h1>
+        <h1 className="menu_top_h1 desktop">
+          {data[6].p2} {todaay}
+        </h1>
       </section>
       <section className="menu_du_jour menu">
         {menus &&
           menuDuJour.map((el) => (
             <div key={el.id}>
-              <h2>{el.Plat} du jour</h2>
+              <h2>
+                {el.Plat} {data[6].p3}
+              </h2>
               <div>
                 <div className="prix">
-                  <h3>{el.Plat} seul</h3>
+                  <h3>
+                    {el.Plat} {data[6].p4}
+                  </h3>
                   <p>{el.Prix.toString().replace("€", "".replace(",", "."))}</p>
                 </div>
                 <p>{el.Description}</p>
               </div>
               <div>
                 <div className="prix">
-                  <h3>Formule {el.Plat} midi</h3>
+                  <h3>
+                    {data[6].p5} {el.Plat} midi
+                  </h3>
                   <p>
                     {el.PrixFormule.toString().replace(
                       "€",
@@ -148,7 +157,7 @@ function Services({ helmet }) {
         <section className="menu_desserts menu">
           {menuDesserts.length > 0 && (
             <div>
-              <h2>Desserts du moment</h2>
+              <h2>{data[6].p7}</h2>
               {menuDesserts.map((el) => (
                 <div key={el.id}>
                   <div className="prix">
@@ -165,7 +174,7 @@ function Services({ helmet }) {
         <section className="menu_boissons menu">
           {menuBoissons && (
             <div>
-              <h2>Boissons</h2>
+              <h2>{data[6].p8}</h2>
               {menuBoissons.map((el) => (
                 <div key={el.id}>
                   <div className="prix">
@@ -183,8 +192,8 @@ function Services({ helmet }) {
 
       {menuSuivant.length > 0 && (
         <section className="menu menu_suivant">
-          <h2 className="h1 mobile">Au menu</h2>
-          <h2 className="h1 desktop">À venir</h2>
+          <h2 className="h1 mobile">{data[6].p9}</h2>
+          <h2 className="h1 desktop">{data[6].p9}</h2>
           <div>
             {menuSuivant.map((el) => (
               <div key={el.id}>
@@ -210,14 +219,8 @@ function Services({ helmet }) {
       )}
 
       <section className="menu menu_commande">
-        <h2>Commande de cari au kilo</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ut sequi
-          alias provident, voluptas id cum odio eos, tempora, excepturi ea sed
-          qui a fugiat deleniti dolor quaerat. Vel, quia vero labore illum eius
-          adipisci optio rem doloribus beatae, harum nam voluptatem recusandae
-          corporis nemo corrupti! Labore repudiandae vel neque.
-        </p>
+        <h2>{data[6].p10}</h2>
+        <p>{data[6].p11}</p>
       </section>
     </main>
   );

@@ -6,7 +6,7 @@ import burger from "../../assets/menu.svg";
 import logo from "../../assets/logo.png";
 import precommande from "../../assets/precommande.svg";
 
-function Burger({ helmet, setLangue }) {
+function Burger({ helmet, setLangue, langue }) {
   const [openBurger, setOpenBurger] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ function Burger({ helmet, setLangue }) {
         <img src={logo} alt={`logo de ${helmet.title}`} className="logo" />
       </Link>
       <div className="desktop">
-        <Navbar setOpenBurger={setOpenBurger} />
+        <Navbar setOpenBurger={setOpenBurger} langue={langue} />
       </div>
       <button
         type="button"
@@ -28,13 +28,19 @@ function Burger({ helmet, setLangue }) {
         />
       </button>
       {openBurger && (
-        <Nav setOpenBurger={setOpenBurger} setLangue={setLangue} />
+        <Nav
+          setOpenBurger={setOpenBurger}
+          setLangue={setLangue}
+          langue={langue}
+        />
       )}
       <div className="desktop precommande">
         <img src={precommande} alt="icone petit telephone" />
         <p>
           <span>Précommandez</span> au{" "}
-          <a href="tel:+262693770219">0693770219</a>
+          <a href="https://api.whatsapp.com/send?phone=+2626937702 vhb19&text=Bonjour">
+            0693770219
+          </a>
         </p>
       </div>
     </header>

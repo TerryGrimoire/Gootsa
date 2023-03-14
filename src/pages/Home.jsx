@@ -25,35 +25,27 @@ export default function Home({ helmet, langue }) {
     <div className="formules_explications">
       <div>
         <h3>VégéBon</h3>
-        <h4>le bowl froid</h4>
+        <h4>{data[1].vegeBon}</h4>
         <img
           src={vegebon}
           onDragStart={handleDragStart}
           alt="presentation"
           className="carousel_home_img_gootsa"
         />
-        <p className="p">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum
-          inventore culpa quas repellat accusamus, omnis odit recusandae
-          nostrum? Fugiat veritatis totam reprehenderit.
-        </p>
+        <p className="p">{data[1].p2}</p>
       </div>
     </div>,
     <div className="formules_explications">
       <div>
         <h3>TradiBon</h3>
-        <h4>le bowl froid</h4>
+        <h4>{data[1].tradiBon}</h4>
         <img
           src={vegebon}
           onDragStart={handleDragStart}
           alt="presentation"
           className="carousel_home_img_gootsa"
         />
-        <p className="p">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum
-          inventore culpa quas repellat accusamus, omnis odit recusandae
-          nostrum? Fugiat veritatis totam reprehenderit.
-        </p>
+        <p className="p">{data[1].p3}</p>
       </div>
     </div>,
   ];
@@ -126,12 +118,10 @@ export default function Home({ helmet, langue }) {
         <InfosPratiques langue={langue} />
       </section>
       <section className="InfosPratiques marron paiement">
-        <div className="paiement">
-          <img src={data[3].img4} alt="carte bancaire acceptées" />
-          <p>
-            <span>{data[3].p7}</span> {data[3].p8}
-          </p>
-        </div>
+        <img src={data[3].img4} alt="carte bancaire acceptées" />
+        <p>
+          <span>{data[3].p7}</span> {data[3].p8}
+        </p>
       </section>
     </main>
   );
