@@ -83,12 +83,10 @@ function Contact({ helmet, langue }) {
         className="desktop"
       />
       <section className="InfosPratiques marron paiement">
-        <div className="paiement">
-          <img src={data[3].img4} alt="carte bancaire acceptées" />
-          <p>
-            <span>{data[3].p7}</span> {data[3].p8}
-          </p>
-        </div>
+        <img src={data[3].img4} alt="carte bancaire acceptées" />
+        <p>
+          <span>{data[3].p7}</span> {data[3].p8}
+        </p>
       </section>
 
       <section className="form">
